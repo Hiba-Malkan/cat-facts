@@ -330,11 +330,13 @@ body {
     background: var(--card);
     border: 3px solid var(--text);
     border-radius: 999px;
-    padding: 4px 16px;
+    padding: 6px 20px;
     color: var(--pink-deep);
     white-space: nowrap;
     opacity: 0;
     pointer-events: none;
+    font-size: 20px;
+    font-family: 'Winkle', 'sans-serif';
     transition: opacity 0.25s ease, transform 0.25s ease, color 1.2s ease, border-color 1.2s ease, background-color 1.2s ease;
 }
 .meow-bubble::after {
