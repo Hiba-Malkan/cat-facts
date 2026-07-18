@@ -2,6 +2,10 @@
 
 ## live demo: https://cat-facts-gamma.vercel.app
 
+---
+![alt text](images/image.png)
+---
+
 ## what does it do?
 random cat facts does exactly as the title states, it gives you random cat facts. 
 
@@ -14,7 +18,7 @@ to cycle through the facts, press `space` or click `next fact`. the background c
 - press `space` to cycle through the facts
 - the color palette changes as you cycle through the facts
 - floating paw prints in the bg
-- a cute cat at the bottom, click it to find out!
+- a cute cat at the bottom, click it!
 
 ---
 
@@ -53,7 +57,7 @@ localhost:8080
 
 ---
 
-### written: sat, 19 july, 2026 by Hiba
-### built for onekey, a hackclub ysws
+#### written: sat, 19 july, 2026 by Hiba
+##### built for onekey, a hackclub ysws
 
----
+
