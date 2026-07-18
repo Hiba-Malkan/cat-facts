@@ -5,6 +5,7 @@ const dotsEl = document.getElementById('dots');
 const nextBtn = document.getElementById('nextBtn');
 const sky = document.getElementById('sky');
 const root = document.documentElement;
+const pawIcon = 'images/paw-icon.svg';
 
 let i = 0;
 const palette = [
@@ -117,3 +118,75 @@ function spawnPaws() {
         sky.appendChild(el);
     }
 }
+
+function renderDots() {
+    dotsEl.innerHTML = '';
+    facts.forEach((_, idx) => {
+        const d = document.createElement('div');
+        d.className = 'dot' + (idx === i ? ' active' : '');
+        dotsEl.appendChild(d);
+    });
+}
+
+function render () {
+    const progress = i / (facts.length - 1);
+    FontFaceSetLoadEvent.textContent = facts[i];
+    counterEl.textContent = `fact ${i + 1} of ${facts.length}`;
+    applyPalette(progress);
+    renderDots();
+    spawnDots();
+    card.classList.remove('shake');
+    void card.offsetWidth;
+    card.classList.add('shake');
+    if (i === facts.length - 1) {
+        counterEl.classList.add('it knew you would get here');
+        counterEl.textContent = "they're always watching";
+
+    }
+    else {
+        nextBtn.textContent = 'next fact';
+    }
+
+}
+
+function next() {
+    i = (i + 1) % facts.length;
+    render();
+}
+document.addEventListener('keydown', e => {
+    if (e.key === 'Space') {
+        e.preventDefault();
+        next();
+    }
+});
+nextBtn.addEventListener('click', next);
+const catbox = document.getElementById('catbox');
+const catimg = document.getElementById('catimg');
+const meowBubble = document.getElementById('meowBubble');
+const meows = [
+    'meow!',
+    'mrrrp',
+    'purr...',
+    'mrraeow',
+    'mreow?',
+    'hisssss....',
+    'meow meow',
+]
+let meowTimeout;
+function doMeow() {
+    meowBubble.textContent = meows[Math.floor(Math.random() * meows.length)];
+    meowBubble.classList.remove('show');
+    void meowBubble.offsetWidth;
+    meowBubble.classList.add('show');
+    meowBubble.classList.remove('bounce');
+    void catimg.offsetWidth;
+    catimg.classList.add('bounce');
+    clearTimeout (meowTimeout);
+    meowTimeout = setTimeout(() => {
+        meowBubble.classList.remove('show');
+    }, 1400);
+
+
+}
+catbox.addEventListener('click', doMeow);
+render()
