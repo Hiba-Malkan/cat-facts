@@ -80,14 +80,13 @@ function lerp(a,b,t) {
 
 function hexToRgb(hex) {
     const v = parseInt(hex.slice(1), 16);
-    return {
-        r: (v >> 16) & 255,
-        g: (v >> 8) & 255,
-        b: v & 255
-    };
-    
-
+    return [
+        (v >> 16) & 255,
+        (v >> 8) & 255,
+        v & 255
+    ];
 }
+    
 function rgbToHex(r, g, b) {
     return '#' + [r, g, b].map(x => Math.round(x).toString(16).padStart(2, '0')).join('');
 }
@@ -104,6 +103,7 @@ function applyPalette(progress) {
     const idx = Math.min(se - 1, Math.floor(scaled));
     const t = scaled - idx;
     const a = palette[idx];
+    const b = palette[idx + 1];
     const keys = [
         'bg1', 'bg2', 'card', 'pink', 'deep', 'lav', 'text', 'soft'
     ];
@@ -156,7 +156,7 @@ function render () {
     factEl.textContent = facts[i];
     counterEl.textContent = `fact ${i + 1} of ${facts.length}`;
     applyPalette(progress);
-    renderDots();
+    spawnPaws();
     renderDots();
     card.classList.remove('shake');
     void card.offsetWidth;
