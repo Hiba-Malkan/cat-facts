@@ -140,3 +140,174 @@ body {
     opacity: 0.85;
     transform: scaleX(-1);
 }
+.title-row .paw-icon.flip {
+    transform: scaleX(1);
+}
+
+.title {
+    text-align: center;
+    font-family: 'Winkle', 'sans-serif';
+    font-size: 44px;
+    color: var(--pink-deep);
+    letter-spacing: 0.02em;
+    transition: color 1.2s ease;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-soft);
+    margin-bottom: 26px;
+    letter-spacing: 0.05em;
+}
+
+.hint {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+    color: var(--text-soft);
+    font-family: 'Winkle', 'sans-serif';
+}
+
+.hint kbd {
+    background: var(--card);
+    border: 2px solid var(--pink);
+    border-radius: 8px;
+    padding: 2px 10px;
+    font-family: 'Winkle', 'sans-serif';
+    color: var(--pink-deep);
+    box-shadow: 0 2px 0 var(--pink);
+
+}
+
+.next-btn {
+    display: block;
+    margin: 22px auto 0;
+    background: var(--pink-deep);
+    color: var(--card);
+    border: 3px solid var(--text);
+    border-radius: 999px;
+    padding: 10px 28px;
+    font-size: 16px;
+    font-family: 'Winkle', 'sans-serif';
+    cursor: pointer;
+    box-shadow: 4px 4px 0 var(--text);
+    transition: background-color 1.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+.next-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 var(--text);
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 18px;
+}
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--pink);
+    opacity: 0.3;
+    transition: opacity 0.3s ease, background 1s ease;
+
+}
+.dot .active {
+    opacity: 1;
+}
+
+.eyes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    letter-spacing: 20px;
+}
+
+.shake {
+    animation: shake 0.4s ease;
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0) rotate(var(--tilt));
+
+    }
+    20% {
+        transform: translateX(-6px) rotate(calc(var(--tilt) - 1deg));
+    }
+    40% {
+        transform: translateX(6px) rotate(calc(var(--tilt) + 1deg));
+    }
+    60% {
+        transform: translate(-4px) rotate(var(--tilt));
+    }
+    80% {
+        transform: translateX(4px) rotate(var(--tilt));
+
+    }
+}
+
+.catwrap {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10; 
+}
+
+.catbox {
+    position: relative;
+    background: var(--card);
+    border: 3px solid var(--text);
+    border-radius: 22px;
+    padding: 10px 14px 6px;
+    box-shadow: 4px 4px 0 var(--pink);
+    cursor: pointer;
+    display: flex;
+    user-select: none;
+    transition: border-color 1.2s ease, box-shadow 1.2s ease, background-color 1.2s ease, transform 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+.catbox:active {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 var(--pink);
+}
+
+.catimg {
+    display: block;
+    width: 84px;
+    height: auto;
+    transform-origin: 50% 90%;
+}
+.catimg.bounce {
+    animation: catbounce 0.55s ease;
+}
+
+@keyframes catbounce{
+    0% {
+        transform: scale(1, 1) translateY(0);
+
+    }
+    25% {
+        transform: scale(0.92, 1.1) translateY(2px);
+    }
+    50% {
+        transform: scale(1.08, 0.9) translateY(-10px); 
+    }
+    75% {
+        transform: scale(0.97, 1.04) translateY(2px);
+    }
+    100% {
+        transform: scale(1, 1) translateY(0);
+
+    }
+}
