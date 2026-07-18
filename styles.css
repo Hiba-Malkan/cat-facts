@@ -36,7 +36,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px 0;
+    padding: 30px 0;
     transition: background 1.2s ease;
     position: relative;
     color: var(--text);
@@ -269,7 +269,7 @@ body {
     background: var(--card);
     border: 3px solid var(--text);
     border-radius: 22px;
-    padding: 10px 14px 6px;
+    padding: 16px 20px 10px;
     box-shadow: 4px 4px 0 var(--pink);
     cursor: pointer;
     display: flex;
@@ -284,7 +284,7 @@ body {
 
 .catimg {
     display: block;
-    width: 84px;
+    width: 130px;
     height: auto;
     transform-origin: 50% 90%;
 }
