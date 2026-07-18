@@ -39,6 +39,8 @@ body {
     transition: background 1.2s ease;
     position: relative;
     color: var(--text);
+    padding: 100px 0px;
+
 }
 .sky {
     position: absolute;
@@ -79,7 +81,7 @@ body {
     font-size: 15px;
     letter-spacing: 0.12em;
     color: var(--text-soft);
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     text-transform: uppercase;
     font-family: 'Winkle', 'sans-serif';
     transition: color 1s ease;
@@ -283,7 +285,7 @@ body {
 
 .catimg {
     display: block;
-    width: 130px;
+    width: 108px;
     height: auto;
     transform-origin: 50% 90%;
 }
