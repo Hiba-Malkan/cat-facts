@@ -206,7 +206,7 @@ function doMeow() {
     meowBubble.classList.remove('show');
     void meowBubble.offsetWidth;
     meowBubble.classList.add('show');
-    meowBubble.classList.remove('catimg');
+    meowBubble.classList.remove('bounce');
     void catimg.offsetWidth;
     catimg.classList.add('bounce');
     clearTimeout (meowTimeout);
@@ -219,4 +219,5 @@ function doMeow() {
 let isHoveringCat = false;
 catbox.addEventListener('mouseenter', () => { isHoveringCat = true; });
 catbox.addEventListener('mouseleave', () => { isHoveringCat = false; });
+document.addEventListener('keydown', e => console.log('key:', e.code, 'hovering:', isHoveringCat));
 render()
