@@ -3,7 +3,7 @@
 ## live demo: https://cat-facts-gamma.vercel.app
 
 ---
-![alt text](images/image.png)
+![alt text](images/readme.png)
 ---
 
 ## what does it do?
