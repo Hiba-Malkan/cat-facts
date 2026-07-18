@@ -52,8 +52,8 @@ localhost:8080
 ---
 
 ## ai usage
-- used ai for minor css fixes
-- used ai to fix the rgbToHex and hextoRgb functions
+- used gemini flash for minor css fixes
+- used gemini flash to fix the rgbToHex and hextoRgb functions
 
 ---
 
