@@ -177,7 +177,7 @@ function next() {
     render();
 }
 document.addEventListener('keydown', e => {
-    if (e.key === 'Space') {
+    if (e.code === 'Space') {
         e.preventDefault();
         if (isHoveringCat) {
             doMeow();
@@ -206,7 +206,7 @@ function doMeow() {
     meowBubble.classList.remove('show');
     void meowBubble.offsetWidth;
     meowBubble.classList.add('show');
-    meowBubble.classList.remove('bounce');
+    meowBubble.classList.remove('catimg');
     void catimg.offsetWidth;
     catimg.classList.add('bounce');
     clearTimeout (meowTimeout);
