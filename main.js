@@ -22,6 +22,7 @@ const facts = [
 
 
 const card = document.getElementById('card');
+const factEl = document.getElementById('fact');
 const counterEl = document.getElementById('counter');
 const dotsEl = document.getElementById('dots');
 const nextBtn = document.getElementById('nextBtn');
@@ -152,7 +153,7 @@ function renderDots() {
 
 function render () {
     const progress = i / (facts.length - 1);
-    FontFaceSetLoadEvent.textContent = facts[i];
+    factEl.textContent = facts[i];
     counterEl.textContent = `fact ${i + 1} of ${facts.length}`;
     applyPalette(progress);
     renderDots();
