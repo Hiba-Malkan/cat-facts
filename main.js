@@ -156,7 +156,7 @@ function render () {
     counterEl.textContent = `fact ${i + 1} of ${facts.length}`;
     applyPalette(progress);
     renderDots();
-    spawnDots();
+    renderDots();
     card.classList.remove('shake');
     void card.offsetWidth;
     card.classList.add('shake');
