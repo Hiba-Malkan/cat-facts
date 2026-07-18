@@ -1,4 +1,26 @@
-const facts = []
+const facts = [
+    "Cats sleep a lot, often up to 16 hours a day.",
+    "A group of cats is called a clowder.",
+    "Cats have retractable claws, which they use for hunting and climbing.",
+    "Cats have a third eyelid, for extra blinking.",
+    "Cats are known for their agility and can jump up to six times their body length.",
+    "Cats have a strong sense of smell, which is about 14 times stronger than humans.",
+    "A cat's whiskers are roughly as wide as its body, so it always knows if it fits.",
+    "Cats can make over 100 different sounds, while dogs can only make about 10.",
+    "Cats can sense small earthquakes minutes before they happen.",
+    "Cats blink slowly to say 'I love you.' They also use this on empty boxes.",
+    "Cats can't taste sweetness.",
+    "Cats have been domesticated for over 4,000 years.",
+    "Cats can rotate their ears 180 degrees.",
+    "Cats have a unique grooming behavior called 'allogrooming,' where they groom each other to strengthen social bonds.",
+    "Cats are crepuscular, meaning they are most active during dawn and dusk.",
+    "Your cat can hear you get up before your feet touch the floor.",
+    "Cats have a specialized collarbone that allows them to always land on their feet.",
+    "Cats dream, just like you do. You can tell when they are dreaming because their paws twitch and their eyes move. But no one knows what they dream about. Catnip, perhaps?",
+
+]
+
+
 const card = document.getElementById('card');
 const counterEl = document.getElementById('counter');
 const dotsEl = document.getElementById('dots');
