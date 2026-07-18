@@ -50,3 +50,93 @@ body {
     overflow: hidden;
     pointer-events: none;
 }
+
+.paw {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    opacity: 0.4;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(var(--r, 0deg));
+
+    }
+    50% {
+        transform: translateX(-18px) rotate(var(--r, 0deg));
+    }
+}
+
+.stage {
+    position: relative;
+    width: min(94vw, 580px);
+    z-index: 2;
+}
+
+.counter {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0.12em;
+    color: var(--text-soft);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Winkle', 'sans-serif';
+    transition: color 1s ease;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 30px;
+    padding: 64px 44px 56px;
+    text-align: center;
+    box-shadow: 7px 7px 0 var(--pink);
+    border: 3px solid var(--text);
+    position: relative;
+    transition: transform 0.5s cubic-bezier(0.2,0.9,0.3,1.3), border-color 1.2s ease, box-shadow 1.2 ease, background 1.2s ease;
+    transform: rotate(var(--tilt));
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card::before {
+    content: "";
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--pink-deep);
+    background-image: var(--paw-icon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 3px solid var(--text);
+    transition: background-color 1.2s ease;
+}
+
+.fact {
+    font-size: 38px;
+    line-height: 1.45;
+    color: var(--text);
+    font-family: 'Winkle', 'sans-serif';
+    transition: color 1s ease;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 4px
+}
+.title-row .paw-icon {
+    width: 22px;
+    height: 22px; 
+    opacity: 0.85;
+    transform: scaleX(-1);
+}
