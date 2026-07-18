@@ -179,7 +179,12 @@ function next() {
 document.addEventListener('keydown', e => {
     if (e.key === 'Space') {
         e.preventDefault();
-        next();
+        if (isHoveringCat) {
+            doMeow();
+        }
+        else {
+            next();
+        }
     }
 });
 nextBtn.addEventListener('click', next);
@@ -211,5 +216,7 @@ function doMeow() {
 
 
 }
-catbox.addEventListener('click', doMeow);
+let isHoveringCat = false;
+catbox.addEventListener('mouseenter', () => { isHoveringCat = true; });
+catbox.addEventListener('mouseleave', () => { isHoveringCat = false; });
 render()

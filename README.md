@@ -18,7 +18,7 @@ to cycle through the facts, press `space` or click `next fact`. the background c
 - press `space` to cycle through the facts
 - the color palette changes as you cycle through the facts
 - floating paw prints in the bg
-- a cute cat at the bottom, click it!
+- a cute cat at the bottom, hover over it and press space!
 
 ---
 
