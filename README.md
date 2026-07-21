@@ -1,4 +1,5 @@
 # random cat facts
+see random cat facts by clicking space! hover over the cat in the corner and click space for a little easter egg!
 
 ## live demo: https://cat-facts-gamma.vercel.app
 
